@@ -19,7 +19,6 @@ __mtime__ = '2020/2/7'
                   ┗┻┛  ┗┻┛
 """
 
-
 # 数字类型提供了标量存储和直接访问。它是不可更改类型，变更数字的值会生成新的对象
 # 型提供了标量存储和直接访问。它是不可更改类型，变更数字的值会生成新的对象，当然开发者不会感觉到对象已经变化。
 # 数字类型是数值型数据，支持整型、浮点、布尔类型和复数。数值型即数值数据，用于表示数量，并可以进行数值运算。
@@ -31,6 +30,7 @@ __mtime__ = '2020/2/7'
 
 import util.log as log
 
+
 def intfunc():
     intObj = 123
     intHexObj = 0x123
@@ -41,7 +41,29 @@ def intfunc():
     # 直接打印出来
     print(intHexNavObj, "类型:", type(intHexNavObj).__name__)
     # 复数
-    log.info(1+1j);
-    
+    log.info(1 + 1j);
+    mi()
+    divide()
+
+
+def mi():
+    # 幂赋值运算符
+    mi = 2;
+    mi **= 4;
+    log.info("取幂:" + str(mi))
+
+
+def divide():
+    # Python2.x 里，整数除整数，只能得出整数。如果要得到小数部分，把其中一个数改成浮点数即可。
+    # Python3不需要
+    log.info("浮点除:" + str(2 / 4))
+    deivide1 = 9;
+    deivide2 = -9;
+    # 整除赋值
+    deivide1 //= 2;
+    deivide2 //= 2;
+    log.info("取整除:" + str(deivide1))
+    log.info("取整除:" + str(deivide2))
+
 
 intfunc()
