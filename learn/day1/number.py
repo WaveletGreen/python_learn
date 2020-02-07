@@ -29,6 +29,8 @@ __mtime__ = '2020/2/7'
 # 这里所指的“变更”并没有更新该对象的原始数值，而是生成了一个新的数值对象，并返回这个数值对象的引用。
 # 前面说过，数值对象是不可改变的对象，当程序更新一个数值对象时，Python会创建一个新的数值对象，并将该数值对象的引用返回给变量。
 
+import util.log as log
+
 def intfunc():
     intObj = 123
     intHexObj = 0x123
@@ -38,6 +40,8 @@ def intfunc():
     print(str(intHexObj) + "类型:" + type(intHexObj).__name__)
     # 直接打印出来
     print(intHexNavObj, "类型:", type(intHexNavObj).__name__)
-
+    # 复数
+    log.info(1+1j);
+    
 
 intfunc()
