@@ -33,9 +33,11 @@ def intfunc():
     intObj = 123
     intHexObj = 0x123
     intHexNavObj = -0x123
+    # 没办法将不同类型的数据拼接成字符串
     print(str(intObj) + "类型:" + type(intObj).__name__)
     print(str(intHexObj) + "类型:" + type(intHexObj).__name__)
-    print(str(intHexNavObj), "类型:", type(intHexNavObj).__name__)
+    # 直接打印出来
+    print(intHexNavObj, "类型:", type(intHexNavObj).__name__)
 
 
 intfunc()
