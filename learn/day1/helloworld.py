@@ -18,6 +18,21 @@ __mtime__ = '2020/2/7'
                   ┃┫┫  ┃┫┫
                   ┗┻┛  ┗┻┛
 """
+import sys;
+
 
 def helloworld():
-    print ("你好，世界")
+    print("你好，世界")
+
+
+def writex():
+    x = 'hello world';
+    sys.stdout.write(x + '\n')
+
+
+def writeOneLine(word):
+    print(word, word)
+
+
+writex()
+writeOneLine("你好，世界")
